@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "vitoria",
+			"path": ".."
+		},
+		{
+			"name": "3DS",
+			"path": "../../TEC.046.003/3DS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "vitoria"
+	}
+}
