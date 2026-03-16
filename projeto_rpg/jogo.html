@@ -8,33 +8,75 @@
 <body>
     <div>
         <div class="container">
-            <div class="row">
-                <div class="col text-end" id="col-heroi">
-                    <div id="nome-heroi">David</div>🗡️
-                    <progress id="hp-heroi" value="100" max="100" style="accent-color: red;"></progress>
-                    <progress id="hp-heroi" value="100" max="100" style="accent-color: red;">
-                    </progress>
-                    <progress id="en-hero" value="0" max="100" style="accent-color: orange;"></progress>
-                      <img src="assets/Guerreiro Nú Grande.gif" width="200pix" >
-                </div>
-                <div class="col" id="col-boss">
+            <div class="card text-center">
+                <div class="card-header">RPG: Criado por Vitória</div>
+                <div class="card-body" id="tela"
+                    style="background-image: url('assets/23.avif');background-repeat: no-repeat ;background-size: cover;">
 
+                    <p class="card-text">turno 1👾</p>
+                    <div class="row">
+                        <div class="col text-end" id="col-heroi">
+                            <ul class="list-group float-end" style="width: 225px;">
+                                <li id="titulo-heroi" class="list-group-item"> David ⚔️</li>
+                                <li id="hp-heroi" class="list-group-item">🫀<progress id="hp-heroi" value="100"
+                                        max="100" style="accent-color: red;"></progress></li>
+                                <li id="mp-heroi" class="list-group-item">🪫<progress id="hp-heroi" value="100"
+                                        max="100" style="accent-color: red;"></progress></li>
+                                <li id="en-heroi" class="list-group-item">💣️ <progress id="en-hero" value="0" max="100"
+                                        style="accent-color: orange;"></progress></li>
+                            </ul>
+
+
+
+
+
+
+                        </div>
+                        <div class="col" id="col-boss">
+                            <ul class="list-group float-start" style="width: 225px;">
+                                <li id="titulo-boss" class="list-group-item">🔥Smaug</li>
+                                <li id="hp-boos" class="list-group-item">🫀<progress id="hp-boss" value="100" max="100"
+                                        style="accent-color: red;"></progress></li>
+                                <li id="mp-boss" class="list-group-item">🪫<progress id="hp-boss" value="100" max="100"
+                                        style="accent-color: red;"></progress></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-end" id="col-botoes">
+                            <div>
+                        
+
+                                <div>
+                                   <img src="assets/heroi5.gif" width="200px" height="200px">
+                                </div>
+
+                                <div class="btn-group" id="controles">
+
+                                    <button class="btn btn-warning">ATTACK</button>
+                                    <button class="btn btn-warning">SKILL</button>
+                                    <button class="btn btn-warning">UTIMATE</button>
+
+                                </div>
+                            </div>
+
+                            <div>
+                                
+
+                            </div>
+                            <div class="col text-start" id="col-msg">
+                                <img src="assets/boss7.gif" width="200px" height="200px">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer"></div>
                 </div>
+
             </div>
-            <div class="row">
-                <div class="col" id="col-botoes">
-
-
-                </div>
-                <div classe="col" id="col-msg">
-
-                </div>
-            </div>
-
-
-
         </div>
-    </div>
 </body>
 
 </html>
