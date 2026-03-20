@@ -1,0 +1,4 @@
+
+const hora = 14;
+const saudacao = hora < 12 ? "bom dia" : hora < 18 ? "boa tarde" : "boa noite";
+console.log(saudacao);

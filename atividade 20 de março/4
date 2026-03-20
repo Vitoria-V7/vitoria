@@ -1,0 +1,3 @@
+const frutas = ["marça", "banana"];
+frutas.push("laranja");
+console.log(frutas.length);
