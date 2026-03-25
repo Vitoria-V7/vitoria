@@ -28,11 +28,14 @@ class Personagem {
         if (this.energia == 100) {
             alvo.hp -= 15;
             this.energia = 0;
+            return `Boss usou sua habilidade`;
         } else {
             this.energia += 50;
+            return `Boss carregou o ataque`
         }
 
     }
+}
 
 class Habilidade {
     constructor(id, nome, dano, custo, energia) {
@@ -54,8 +57,11 @@ document.getElementById("titulo-heroi").textContent = `${hero.titulo}`;
 document.getElementById("nome-boss").textContent = `${boss.nome}`;
 document.getElementById("titulo-boss").textContent = `${boss.titulo}`;
 
+// criar array de turnos
+const turnos = ["aguardando ação"];
+
 //atualizar as barras de vida 
-const atualizarInterface = (mensagem) => {
+const atualizarInterface = (msg_hero, msg_boss) => {
     console.log(hero.mana)
 
     // barra heroi
@@ -63,9 +69,21 @@ const atualizarInterface = (mensagem) => {
     document.getElementById("mp-hero").value = hero.mana;
     document.getElementById("en-hero").value = hero.energia;
 
+    // barra do boss
+    document.getElementById("hp-boss").value = boss.hp;
+    document.getElementById("en-boss").value = boss.energia;
 
+    // turnos
+    document.getElementById("log-hero").textContent = msg_hero;
+    document.getElementById("log-boss").textContent = msg_boss;
 
-
+    // mensagem de vitória/derrota
+    if (boss.hp <= 0)
+        document.getElementById("tela").innerHTML = "Voce perdeu!";
+    {
+        if (hero.hp <= 0)
+            document.getElementById("tela").innerHTML = "Voce perdeu!";
+    }
 }
 
 
@@ -83,9 +101,10 @@ listaHabilidades.forEach(hab => {
     container.appendChild(btn);
     btn.onclick = () => {
 
-        let mensagem = hero.atacar(boss, hab);
-        atualizarInterface(mensagem);
-        boss.boss_atacar(hero);
+        let msg_hero = hero.atacar(boss, hab);
+        let msg_boss = boss.boss_atacar(hero);
+        atualizarInterface(msg_hero, msg_boss);
+       
     }
 });
 
