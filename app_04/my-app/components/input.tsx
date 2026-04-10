@@ -1,7 +1,7 @@
-import {TextInput} from "react-native"
+import {TextInput, StyleSheet} from "react-native"
 
 export function Input() {
-    return <TextInput style={StyleSheet.input} />
+    return <TextInput style={styles.input} />
 }
 
 const styles = StyleSheet.create({
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 48,
         borderWidth: 1,
-        borderColor: '#DCDCDC'
-        borderRadius: 
+        borderColor: '#DCDCDC',
+        borderRadius: 5
     }
 })
