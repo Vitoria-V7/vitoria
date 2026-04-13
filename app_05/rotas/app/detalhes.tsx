@@ -7,9 +7,9 @@ export default function detalhes() {
     return (
         <View style={estilos.container}>
             <Text>Página de Detalhes</Text>
-            <Link href="/login" style={estilos.button}> Sair</Link>
+            <Link style={estilos.button} href="/detalhes"> Detalhes</Link>
             <Button title='Realizar logout'
-                onPress={() => { router.dismissAll(); router.replace("/login") }} />
+                onPress={() => { router.dismissAll(); router.replace("/detalhes") }} />
 
         </View>
     )

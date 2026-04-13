@@ -5,8 +5,8 @@ import { estilos } from '@/constants/global';
 export default function Index() {
     return (
         <View style={estilos.container}>
-            <Text>Página Inicial</Text>
-            <Link href="/detalhes" style={estilos.button}> Detalhes</Link>
+            <Text style={estilos.title}>Página Inicial</Text>
+            <Link style={estilos.button} href="/detalhes"> Detalhes</Link>
         </View>
     )
 }
